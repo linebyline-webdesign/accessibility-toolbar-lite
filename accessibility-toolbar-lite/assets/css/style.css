@@ -1,0 +1,54 @@
+/* Basis-Layout der Toolbar */
+#atl-toolbar {
+  position: fixed;
+  left: 0; right: 0;
+  background: #222; color: #fff;
+  padding: 10px; text-align: center;
+  z-index: 99999; font-family: sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Position oben/unten */
+#atl-toolbar.atl-position-top    { top: 0;    bottom: auto; }
+#atl-toolbar.atl-position-bottom { bottom: 0; top: auto; }
+
+/* WP-Admin-Bar Abstand */
+html.wp-admin-bar #atl-toolbar.atl-position-top {
+  top: 32px !important;
+}
+
+/* Button-Styling */
+#atl-toolbar button {
+  background: #444; border: none;
+  color: #fff !important;
+  padding: 8px 12px; margin: 0 5px;
+  cursor: pointer; font-size: 16px;
+  border-radius: 4px; transition: background .2s;
+}
+#atl-toolbar button:hover,
+#atl-toolbar button:focus {
+  background: #666; outline: none;
+}
+
+/* High-Contrast Mode */
+body.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+body.high-contrast * {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+body.high-contrast a,
+body.high-contrast a:visited {
+  color: #0ff !important;
+  text-decoration: underline !important;
+}
+/* Toolbar im HC-Mode */
+#atl-toolbar {
+  background-color: #000 !important;
+}
+#atl-toolbar button {
+  background-color: #fff !important;
+  color: #000 !important;
+}
